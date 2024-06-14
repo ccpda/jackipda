@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scavenger Hunt</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        #message { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Jacki's mystery birthdayt!</h1>
+    <p>To reveal the hidden message, solve the following:</p>
+    <p><em>What is the answer to life, the universe, and everything?</em></p>
+    <input type="text" id="answer" placeholder="Enter answer">
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="message">The next clue is in the Kitchen.</p>
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById('answer').value;
+            if (answer == '42') {
+                document.getElementById('message').style.display = 'block';
+            } else {
+                alert('Try again!');
+            }
+        }
+    </script>
+</body>
+</html>
